@@ -1,0 +1,207 @@
+/* General styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'IBM Plex Mono', monospace;
+    color: #333;
+}
+
+header {
+    background: #000;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 80px;
+}
+
+header nav ul li {
+    margin: 0;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero {
+    background-image: url('./images/main_bg1.png');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.hero-content {
+    max-width: 600px;
+    font-size: 25px;
+    font-weight: 1500px;
+    text-shadow: 2px 2px 2px black;
+    color: white;
+}
+
+.hero .cta-button {
+    background: #000;
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    display: inline-block;
+    text-shadow: 2px 2px 2px black;
+}
+
+.cta-button:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+
+.features {
+    background-color: black;
+    color: white;
+}
+
+.features, .gallery, .reviews, .contact {
+    padding: 4rem 1rem;
+    text-align: center;
+}
+
+.features h2, .gallery h2, .reviews h2, .contact h2 {
+    margin-bottom: 2rem;
+}
+
+.feature-cards, .review-cards, .gallery-images {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.reviews, .review-card, .review-card {
+    background-color: black;
+    color: white;
+}
+
+.card, .review-card {
+    background: black;
+    color: white;
+    border: 1px solid wheat;
+    border-radius: 5px;
+    padding: 1rem;
+    flex: 1 1 calc(33.333% - 2rem);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.review-card:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.05);
+}
+
+.card:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.05);
+}
+
+.gallery-images img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact form label {
+    text-align: left;
+}
+
+.contact form input, .contact form textarea, .contact form button {
+    padding: 0.5rem;
+    border: 3px solid black;
+    border-radius: 5px;
+}
+
+.contact form button {
+    background: #000;
+    color: white;
+    cursor: pointer;
+    padding: 0.5rem;
+    border: 3px solid white;
+}
+
+.contact form button:hover {
+    background: white;
+    color: black;
+    border: 3px solid black;
+}
+
+footer {
+    background: #000;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+@media (max-width: 768px) {
+    .card, .review-card {
+        flex: 1 1 calc(50% - 2rem);
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    header nav ul li a {
+        font-size: 1.2rem;
+    }
+
+    .hero {
+        height: 60vh;
+    }
+
+    .hero {
+        background-attachment: scroll;
+    }
+}
+
+@media (max-width: 480px) {
+    .card, .review-card {
+        flex: 1 1 100%;
+    }
+
+    .hero {
+        height: 50vh;
+    }
+}
